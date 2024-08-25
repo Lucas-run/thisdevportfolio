@@ -1,1 +1,12 @@
 node_modules/
+
+#logs
+*.log
+
+#variáveis de desenvolvimento
+.env
+
+#scss
+*.scss
+
+
