@@ -9,4 +9,7 @@ node_modules/
 #scss
 *.scss
 
+#gh-pages - gulp
+gulpfile.js
+
 
