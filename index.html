@@ -218,9 +218,19 @@
                 <input type="hidden" name="_subject" value="Contact request from personal website" />
                 <input type="email" name="_replyto" placeholder="Seu e-mail" required>
                 <textarea name="message" placeholder="Sua mensagem" required></textarea>
-                <!--<button type="submit">Enviar</button>-->
+
+
+                <div class="bloco">
+                    <!-- Adicione o reCAPTCHA aqui -->
+                    <div class="g-recaptcha" data-sitekey="6Ld0bDIqAAAAAAmN6PK0Ehqih0SM-2RN4fSDE0HA"></div>
+                    <button type="submit">Enviar</button>
+                </div>
+
+                
             </form>
         </div>
+        <!-- Carregue o script do reCAPTCHA -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <!-- End #contact-form -->
     </div>
     <!-- End #contact -->
