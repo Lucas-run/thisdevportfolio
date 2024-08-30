@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -214,7 +215,7 @@
     <div id="contact">
         <h2>Entre em contato comigo</h2>
         <div id="contact-form">
-            <form method="POST" action="https://formspree.io/dev.lucas.contato@gmail.com">
+            <form method="POST" action="https://formspree.io/f/xvgplllw">
                 <input type="hidden" name="_subject" value="Contact request from personal website" />
                 <input type="email" name="_replyto" placeholder="Seu e-mail" required>
                 <textarea name="message" placeholder="Sua mensagem" required></textarea>
@@ -226,14 +227,27 @@
                     <button type="submit">Enviar</button>
                 </div>
 
-                
+
             </form>
         </div>
-        <!-- Carregue o script do reCAPTCHA -->
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <!-- End #contact-form -->
     </div>
     <!-- End #contact -->
+
+
+    <!-- Código incluído, revisar -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            var response = grecaptcha.getResponse();
+            if (response.length === 0) {
+                // Impede o envio do formulário se o reCAPTCHA não for marcado
+                alert('Marque o reCAPTCHA.');
+                event.preventDefault();
+            }
+        });
+        </script>
+    <!--Fim Código incluído, revisar-->
+
 
     <footer>
         <div class="container">
